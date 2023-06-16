@@ -6,27 +6,27 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(../assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/moon-stars.svg);
+  --switch-bg-url: url(../assets/moon-stars.svg);
 }
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(../assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg);
+  --switch-bg-url: url(../assets/sun.svg);
 }
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  height: 100%;
 }
 
 body * {
@@ -170,11 +170,11 @@ footer {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(../assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(../assets/bg-desktop-light.jpg);
   }
 }
 
@@ -195,4 +195,75 @@ footer {
   to {
     left: 0;
   }
+}
+
+.overlay-modal-experiencias{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(61, 54, 37, 0.514);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+.overlay-modal-experiencias.active{
+    display: flex;
+}
+
+.overlay-modal-experiencias .modal{
+    width: 500px;
+    height: 400px;
+
+    background: var(--bg-url) no-repeat top center/cover;
+
+    color: #e4e6eb;
+
+    padding: 20px;
+
+    border: 2px solid #393a3b;
+    border-radius: 10px;
+    
+
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-modal-experiencias .modal .modal-title{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #393a3b;
+
+    margin-bottom: 30px;
+}
+
+.overlay-modal-experiencias .modal .modal-title .fechar-modal {
+    height: 24px;
+    width: 24px;
+
+    color: #8b0909;
+    background-color: white;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+}
+
+.overlay-modal-experiencias .modal .modal-title .fechar-modal:hover{
+    color: white;
+    background-color: #8b0909;
 }

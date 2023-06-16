@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aglailson DevLinks</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
   </head>
   <body>
     <div id="container">
@@ -25,12 +25,12 @@
         <span></span>
       </div>
 
-      <ul>
-        <li>
-          <a href="#">Minhas experiências</a>
+      <ul class="links">
+        <li class="link-experiencia">
+          <a href="#" class="botao-experiencias">Minhas experiências</a>
         </li>
-        <li>
-          <a href="#">Minhas Formações</a>
+        <li class="link-formacao">
+          <a href="#" class="botao-formacoes">Minhas Formações</a>
         </li>
         <li>
           <a
@@ -66,6 +66,24 @@
       </footer>
     </div>
 
+    <div class="overlay-modal-experiencias">
+      <div class="modal">
+        <div class="modal-title">
+          Minhas Experiências
+          <button class="fechar-modal">X</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay-modal-formacoes">
+      <div class="modal">
+        <div class="modal-title">
+          Minhas Formações
+          <button class="fechar-modal">X</button>
+        </div>
+      </div>
+    </div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -75,6 +93,6 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="./script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
