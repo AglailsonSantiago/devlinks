@@ -14,6 +14,24 @@ closeModalExperiencias.addEventListener("click", function () {
   overLayExperiencias.classList.remove("active")
 })
 
+let openModalFormacoes = document.querySelector(
+  ".links .link-formacao .botao-formacoes"
+)
+
+let overLayFormacoes = document.querySelector(".overlay-modal-formacoes")
+
+let closeModalFormacoes = document.querySelector(
+  ".overlay-modal-formacoes .modal .modal-title .fechar-modal"
+)
+
+openModalFormacoes.addEventListener("click", function () {
+  overLayFormacoes.classList.add("active")
+})
+
+closeModalFormacoes.addEventListener("click", function () {
+  overLayFormacoes.classList.remove("active")
+})
+
 function toggleMode() {
   const html = document.documentElement
   html.classList.toggle("light")
